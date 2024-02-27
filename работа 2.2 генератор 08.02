@@ -1,0 +1,15 @@
+import random
+
+class rand():
+    def __init__ (self, count, minn, maxx):
+        self.count = count
+        self.min = minn
+        self.max = maxx
+        
+    def generator(self):
+        while self.count > 0:
+            yield random.randint(self.min, self.max)
+            self.count -= 1
+a = rand(5,1,100)
+for num in a.generator():
+    print (num)
