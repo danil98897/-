@@ -1,5 +1,6 @@
 import random
 
+# класс с музыкой
 class MusicAlbum:
     def __init__(self, title, artist, release_year, genre, tracklist):
         self.title = title
@@ -18,6 +19,7 @@ class MusicAlbum:
         print("Треки:", self.tracklist)
         print("Воспроизводится трек {}: {}".format(random_track_index + 1, random_track_name))
 
+# класс студент
 class Student:
     def __init__(self, name, age, grade, scores):
         self.name = name
@@ -31,6 +33,7 @@ class Student:
         else:
             return 0
 
+# класс с едой
 class Recipe:
     def __init__(self, name, ingredients):
         self.name = name
@@ -45,18 +48,20 @@ class Recipe:
         print("Готовим блюдо", self.name + "!")
         print("Блюдо", self.name, "готово!")
 
-# Пример использования классов:
+# класс с музыкой
 tracklist = ['Deutschland', 'Radio', 'Zeig dich', 'Ausländer', 'Sex', 'Puppe', 'Was ich liebe', 'Diamant', 'Weit weg', 'Tattoo', 'Hallomann']
 album = MusicAlbum("Deutschland", "Rammstein", 2019, "Neue Deutsche Härte", tracklist)
 album.play_random_track()
 
-student = Student("John", 18, 12, [80, 85, 90])  # Создание объекта класса Student
-print("Имя:", student.name)  # Вывод имени студента
-print("Возраст:", student.age)  # Вывод возраста студента
-print("Класс:", student.grade)  # Вывод класса студента
-print("Оценки:", student.scores)  # Вывод списка оценок студента
-print("Средний балл:", student.average_score())  # Вызов метода average_score и вывод среднего балла
+# класс студента
+student = Student("Коля", 18, 4, [5, 5, 4])  # Создание объекта класса Student
+print("Имя:", student.name)  
+print("Возраст:", student.age)  
+print("Курс:", student.grade)  
+print("Оценки:", student.scores)  
+print("Средний балл:", student.average_score())  
 
-recipe = Recipe("Пельмени", ["Мука", "Мясо", "Лук", "Соль", "Перец"])
+# класс с едой
+recipe = Recipe("Салат", ["Огурец", "Помидор", "Лук", "Соль", "Болгарский перец"])
 recipe.print_ingredients()
 recipe.cook()
