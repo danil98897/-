@@ -17,7 +17,7 @@ class RandomNumberIterator:
         else:
             raise StopIteration
 
-# Пример использования:
-iterator = RandomNumberIterator(5, 1, 100)  # Создание объекта класса-итератора
+
+iterator = RandomNumberIterator(10, 20, 100) 
 for num in iterator:
     print(num)
